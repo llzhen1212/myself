@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />  <!--防止中文變亂碼-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!--讓畫面隨裝置正常縮放-->
     <title>LLZ的小天地</title>
+    <link rel="stylesheet" href="style.css">
   </head>
 
 <body>
@@ -98,8 +99,7 @@
                 </ul>
 
                 <p>
-                    未來也會在這裡分享更多
-                    關於興趣的文章與照片。
+                    未來也會在這裡分享更多關於興趣的文章與照片。
                 </p>
             </article>
         </section>
@@ -273,19 +273,79 @@
 
         <hr>
 
-        <!-- 聯絡資訊 -->
+        
+        <!-- 聯絡表單 -->
         <section id="contact">
-            <h2>Contact | 聯絡我</h2>
-
-            <p>
-                這裡會放上我的社群平台
-                與程式作品連結。
-            </p>
-
-            <p>
-                暫無......
-            </p>
+            <h2>Contact Me | 聯絡我</h2>
+        
+            <p>有什麼想分享的嗎？歡迎留言給我！</p>
+        
+            <form action="#" method="get">
+        
+                <!-- 姓名 -->
+                <label for="name">你的名字：</label>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="請輸入名字"
+                       required>
+        
+                <br><br>
+        
+                <!-- 電子郵件 -->
+                <label for="email">電子郵件：</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="example@email.com"
+                       required>
+        
+                <br><br>
+        
+                <!-- 留言主題 -->
+                <p>留言主題：</p>
+        
+                <input type="radio"
+                       id="chat"
+                       name="topic"
+                       value="chat"
+                       checked>
+                <label for="chat">聊天交流</label>
+        
+                <input type="radio"
+                       id="coding"
+                       name="topic"
+                       value="coding">
+                <label for="coding">程式討論</label>
+        
+                <input type="radio"
+                       id="other"
+                       name="topic"
+                       value="other">
+                <label for="other">其他</label>
+        
+                <br><br>
+        
+                <!-- 留言內容 -->
+                <label for="message">留言內容：</label>
+                <br>
+        
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          cols="40"
+                          placeholder="想說什麼都可以寫在這裡..."
+                          required></textarea>
+        
+                <br><br>
+        
+                <!-- 按鈕 -->
+                <button type="submit">送出留言</button>
+                <button type="reset">清除重填</button>
+        
+            </form>
         </section>
+
 
     </main>
 
