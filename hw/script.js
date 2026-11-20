@@ -1,6 +1,4 @@
-
- // 1. 取得使用者資料
-function hello() {
+ // 1. 取得使用者資料function hello() {
   alert("Welcome to my Homepage!");
 
   let name = prompt("Please enter your name:");
