@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI 計算機</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, "Microsoft JhengHei", sans-serif;
+      background: linear-gradient(135deg, #e9f3ff, #cfe5ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 460px;
+      padding: 40px 32px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(43, 95, 160, 0.15);
+      text-align: center;
+    }
+
+    h1 {
+      color: #1f63bd;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #586d88;
+      line-height: 1.8;
+    }
+
+    button {
+      margin-top: 18px;
+      padding: 13px 30px;
+      background-color: #2672ce;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #165aab;
+    }
+
+    #result {
+      margin-top: 28px;
+      padding: 20px;
+      background-color: #edf5ff;
+      border-radius: 12px;
+    }
+
+    #guest {
+      color: #1f63bd;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    #status {
+      margin-bottom: 0;
+    }
+
+    .note {
+      margin-top: 28px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <h1>BMI 計算機</h1>
+
+    <p>
+      歡迎使用 BMI 計算機！<br>
+      點擊下方按鈕，輸入你的姓名、身高及體重，
+      就可以計算 BMI。
+    </p>
+
+    <button onclick="startBMI()">
+      開始計算
+    </button>
+
+    <div id="result">
+      <h2 id="guest">尚未計算 BMI</h2>
+      <p id="status">結果會顯示在這裡</p>
+    </div>
+
+    <p class="note">
+      BMI = 體重（公斤）÷ 身高（公尺）的平方
+    </p>
+
+  </div>
+
+  <!-- 連結外部 JavaScript 檔案 -->
+  <script src="test.js"></script>
+
+</body>
+</html>
