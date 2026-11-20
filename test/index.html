@@ -1,23 +1,77 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BMI</title>
+  <title>BMI 計算機</title>
 </head>
 
 <body>
-<script>
-  name = window.prompt("請輸入您的姓名")
-  height = window.prompt("請輸入您的身高，單位是公尺")
-  weight = window.prompt("請輸入您的體重，單位是公斤")
+  <h1>BMI 計算機</h1>
 
-  bmi = weight / (height * height)
+  <p>請輸入以下資料：</p>
 
-  str = name +"的身高："+ height + name +"的體重："+ weight
-  console.iog(str)
+  <label for="name">姓名：</label>
+  <input type="text" id="name" placeholder="請輸入姓名">
+  <br><br>
 
-  alert(name +"您好，您的bmi是"+ bmi)
-</script>
+  <label for="height">身高（公分）：</label>
+  <input type="number" id="height" placeholder="請輸入身高" step="any">
+  <br><br>
+
+  <label for="weight">體重（公斤）：</label>
+  <input type="number" id="weight" placeholder="請輸入體重" step="any">
+  <br><br>
+
+  <button onclick="startBMI()">計算BMI</button>
+
+  <h2 id="guest">您的BMI將顯示在這裡</h2>
+
+  <script>
+
+    // 取得使用者輸入資料
+    function hello() {
+      let name = document.getElementById("name").value;
+      let height = document.getElementById("height").value;
+      let weight = document.getElementById("weight").value;
+
+      return [name, height, weight];
+    }
+
+    // 計算 BMI
+    let bmicalculate = function(height, weight) {
+      return weight / (height * height);
+    };
+
+    // 顯示 BMI 結果
+    let h1func = (guest, bmi) => {
+      document.getElementById("guest").textContent =
+        guest[0] + " 您好，您的 BMI 是 " + bmi.toFixed(2);
+    };
+
+    // 開始計算
+    function startBMI() {
+      let guest = hello();
+
+      if (guest[0].trim() === "" ||
+          guest[1].trim() === "" ||
+          guest[2].trim() === "" ||
+          Number(guest[1]) <= 0 ||
+          Number(guest[2]) <= 0) {
+        alert("請輸入正確的姓名、身高及體重");
+        return;
+      }
+
+      let bmi = bmicalculate(
+        Number(guest[1]),
+        Number(guest[2])
+      );
+
+      h1func(guest, bmi);
+    }
+
+  </script>
+
 </body>
 </html>
