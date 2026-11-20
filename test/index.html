@@ -9,10 +9,10 @@
 <body>
 <script>
   name = window.prompt("請輸入您的姓名")
-  heigh = window.prompt("請輸入您的身高，單位是公尺")
+  height = window.prompt("請輸入您的身高，單位是公尺")
   weight = window.prompt("請輸入您的體重，單位是公斤")
 
-  bmi = weight / height * height
+  bmi = weight / (height * height)
 
   str = name +"的身高："+ height + name +"的體重："+ weight
   console.iog(str)
